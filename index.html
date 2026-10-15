@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="La Esquina del Cumbe: cocina tradicional de Cajamarca, hecha con productos locales y memoria familiar.">
+  <title>La Esquina Cajamarca | Cocina Cajamarquina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="brand" href="#inicio" aria-label="La Esquina del Cumbe, inicio">
+        <span class="brand-mark">EC</span>
+        <span><strong id="site-name">La Esquina</strong><small id="site-subtitle">de Cajamarca</small></span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <a href="#historia">Nuestra historia</a>
+        <a href="#menu">Carta</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a class="button button-small reservation-link" href="#" target="_blank" rel="noopener noreferrer">Reservar mesa <span>↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-pattern" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" id="hero-eyebrow">Cocina de altura · Cajamarca, Perú</p>
+          <h1 id="hero-title">El sabor de nuestra tierra, <em>servido en tu mesa.</em></h1>
+          <p class="hero-text" id="hero-text">Recetas que nacen en los Andes y llegan a tu corazón. Ingredientes locales, fuego lento y la calidez de una familia cajamarquina.</p>
+          <div class="hero-actions">
+            <a class="button" href="#menu">Explorar la carta <span>↓</span></a>
+            <a class="text-link" href="#historia">Conócenos <span>→</span></a>
+          </div>
+          <div class="hero-note"><span class="stars">★★★★★</span> 4.9 · Más de 500 familias felices</div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-image-wrap">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85" alt="Plato colorido preparado con ingredientes frescos">
+          </div>
+          <div class="floating-card"><span>✦</span><strong>100%</strong><small>producto local</small></div>
+          <div class="sun-badge">SABOR<br><strong>ANDINO</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="promise" id="historia">
+      <div class="container promise-grid">
+        <div>
+          <p class="eyebrow" id="history-eyebrow">Una mesa con historia</p>
+          <h2 id="history-title">De la chacra<br><em>a tu corazón</em></h2>
+        </div>
+        <p id="history-text">En La Esquina de Cajamarca honramos los sabores de nuestra tierra. Trabajamos con productores locales para conservar la esencia, el aroma y la alegría de nuestra región.</p>
+        <div class="promise-points">
+          <span><b>✦</b> Ingredientes de temporada</span>
+          <span><b>✦</b> Recetas de tradición familiar</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Nuestra carta</p>
+            <h2 id="menu-title">Un viaje por <em>Cajamarca</em></h2>
+          </div>
+          <p id="menu-text">Clásicos de siempre y sabores que te sorprenderán.</p>
+        </div>
+        <div class="category-list" aria-label="Categorías de la carta">
+          <a class="category active" href="#menu">Todos <span>15</span></a>
+          <a class="category" href="#entradas">Entradas <span>4</span></a>
+          <a class="category" href="#fondos">Fondos <span>7</span></a>
+          <a class="category" href="#dulces">Dulces & bebidas <span>4</span></a>
+        </div>
+
+        <div class="menu-grid" id="menu-grid" aria-live="polite"></div>
+        <!-- El catálogo se carga desde menu-data.js para que el administrador pueda actualizarlo. -->
+        <!--
+          <article class="dish-card" id="entradas">
+            <div class="dish-image"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85" alt="Sopa verde tradicional con hierbas"><span class="tag">Tradicional</span></div>
+            <div class="dish-body"><div class="dish-top"><h3>Caldo verde cajamarquino</h3><strong>S/ 18</strong></div><p>Papas, quesillo, huevo y un bouquet de hierbas andinas.</p><span class="dish-label">Receta familiar</span></div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-image"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85" alt="Humitas de maíz recién preparadas"></div>
+            <div class="dish-body"><div class="dish-top"><h3>Humitas de choclo</h3><strong>S/ 14</strong></div><p>Maíz tierno, queso mantecoso y un toque dulce, envuelto en panca.</p><span class="dish-label">Vegetariano</span></div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-image"><img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=900&q=85" alt="Sopa de chochoca con verduras"></div>
+            <div class="dish-body"><div class="dish-top"><h3>Sopa de chochoca</h3><strong>S/ 20</strong></div><p>Maíz molido, cecina, col y hierbas aromáticas de la sierra.</p><span class="dish-label">Reconfortante</span></div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-image"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=900&q=85" alt="Chicharrón dorado con mote"></div>
+            <div class="dish-body"><div class="dish-top"><h3>Chicharrón con mote</h3><strong>S/ 29</strong></div><p>Chicharrón de panceta, mote serrano, cebolla y hierbabuena.</p><span class="dish-label">El más pedido</span></div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-image"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85" alt="Frito cajamarquino acompañado de papa"></div>
+            <div class="dish-body"><div class="dish-top"><h3>Frito cajamarquino</h3><strong>S/ 26</strong></div><p>Papa dorada, aderezo de ají panca, arroz y ensalada criolla.</p><span class="dish-label">Sabor de casa</span></div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-image"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85" alt="Cecina ahumada con papas"></div>
+            <div class="dish-body"><div class="dish-top"><h3>Cecina shilpida</h3><strong>S/ 32</strong></div><p>Cecina ahumada, papa, huevo y salsa de ají amarillo.</p><span class="dish-label">De la sierra</span></div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-image"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85" alt="Pachamanca con carnes y tubérculos"></div>
+            <div class="dish-body"><div class="dish-top"><h3>Pachamanca de la casa</h3><strong>S/ 42</strong></div><p>Carnes maceradas, habas, papa y camote cocidos en aromas andinos.</p><span class="dish-label">Solo fines de semana</span></div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-image"><img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=900&q=85" alt="Tamales cajamarquinos envueltos en hojas"></div>
+            <div class="dish-body"><div class="dish-top"><h3>Tamales cajamarquinos</h3><strong>S/ 13</strong></div><p>Masa de maíz, pollo, aceituna y ají, envuelta a mano.</p><span class="dish-label">Entrada</span></div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-image"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=900&q=85" alt="Postre de manjar blanco y frutas"></div>
+            <div class="dish-body"><div class="dish-top"><h3>Manjar blanco artesanal</h3><strong>S/ 12</strong></div><p>Manjar de leche cajamarquina, galleta de vainilla y frutas.</p><span class="dish-label">Dulce tradicional</span></div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-image"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85" alt="Torta de chocolate decorada"></div>
+            <div class="dish-body"><div class="dish-top"><h3>Torta de chocolate y café</h3><strong>S/ 15</strong></div><p>Bizcocho húmedo, cacao y café de altura con crema fresca.</p><span class="dish-label">Para cerrar bonito</span></div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-image"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85" alt="Caldo de cabeza tradicional servido caliente"></div>
+            <div class="dish-body"><div class="dish-top"><h3>Caldo de cabeza</h3><strong>S/ 22</strong></div><p>Caldo sustancioso con papa, mote, hierbabuena y ají.</p><span class="dish-label">Tradición norteña</span></div>
+          </article>
+          <article class="dish-card" id="dulces">
+            <div class="dish-image"><img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=900&q=85" alt="Chicha morada servida con hielo"></div>
+            <div class="dish-body"><div class="dish-top"><h3>Chicha morada de la casa</h3><strong>S/ 9</strong></div><p>Maíz morado, piña, canela y clavo, servida bien fría.</p><span class="dish-label">Sin alcohol</span></div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-image"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85" alt="Café servido en una taza"></div>
+            <div class="dish-body"><div class="dish-top"><h3>Café de altura</h3><strong>S/ 8</strong></div><p>Café cajamarquino tostado en casa, con notas de chocolate.</p><span class="dish-label">Orgánico</span></div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-image"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85" alt="Infusión de hierbas andinas"></div>
+            <div class="dish-body"><div class="dish-top"><h3>Emoliente andino</h3><strong>S/ 7</strong></div><p>Mezcla caliente de cebada, linaza, hierbas y miel de abeja.</p><span class="dish-label">Digestivo</span></div>
+          </article>
+        -->
+        <p class="menu-note">Los precios pueden variar según la temporada y disponibilidad de nuestros productores.</p>
+      </div>
+    </section>
+
+    <section class="reservation">
+      <div class="container reservation-inner">
+        <div><p class="eyebrow">Tu próxima experiencia</p><h2>Ven a saborear <em>Cajamarca</em></h2></div>
+        <p>Reserva una mesa y déjanos cocinarte una historia que querrás volver a contar.</p>
+        <a class="button button-light reservation-link" href="#" target="_blank" rel="noopener noreferrer">Reservar ahora <span>↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacto">
+    <div class="container footer-grid">
+      <div class="brand footer-brand"><span class="brand-mark">EC</span><span><strong id="footer-name">La Esquina</strong><small id="footer-subtitle">del Cumbe</small></span></div>
+      <div><strong>Encuéntranos</strong><p id="site-address">Av. La Paz 1230, Cajamarca</p></div>
+      <div><strong>Horarios</strong><p id="site-schedule">Mar - Dom · 12:00 - 22:00</p></div>
+      <div><strong>Escríbenos</strong><p><span id="site-phone">(076) 123 456</span> · <span id="site-email">hola@laesquinadecajamarca.pe</span></p></div>
+    </div>
+    <div class="container copyright">© 2024 La Esquina del Cumbe · Hecho con orgullo cajamarquino</div>
+  </footer>
+  <section class="admin-overlay hidden" id="admin-panel" aria-label="Panel de administración">
+    <div class="admin-shell embedded-admin">
+      <button class="admin-close" id="admin-close" type="button">Cerrar panel ×</button>
+      <section class="auth-card" id="auth-view">
+        <div class="admin-logo">EC</div><p class="eyebrow">Área restringida</p><h1>Panel de administración</h1><p class="auth-intro">Edita el contenido de la página y la carta.</p>
+        <div class="auth-tabs"><button class="auth-tab active" type="button" data-auth-tab="login">Ingresar</button><button class="auth-tab" type="button" data-auth-tab="register">Registrar administrador</button></div>
+        <form id="login-form" class="auth-form"><label>Correo electrónico<input type="email" name="email" required></label><label>Contraseña<input type="password" name="password" minlength="8" required></label><button class="button" type="submit">Ingresar al panel <span>→</span></button></form>
+        <form id="register-form" class="auth-form hidden"><div class="security-notice">El registro requiere la contraseña general entregada por el propietario.</div><label>Nombre<input type="text" name="name" required></label><label>Correo electrónico<input type="email" name="email" required></label><label>Contraseña<input type="password" name="password" minlength="8" required></label><label>Contraseña general de aprobación<input type="password" name="approval" required></label><button class="button" type="submit">Crear cuenta aprobada <span>→</span></button></form>
+        <p class="form-message" id="auth-message" role="alert"></p>
+      </section>
+      <section class="dashboard hidden" id="dashboard-view">
+        <header class="dashboard-head"><div><p class="eyebrow">Sesión protegida</p><h1>Editar sitio</h1><p id="welcome-text"></p></div><button class="button button-outline" id="logout-button" type="button">Cerrar sesión</button></header>
+        <div class="dashboard-grid site-dashboard-grid">
+          <form class="dish-form site-form" id="site-form">
+            <div class="form-heading"><div><p class="eyebrow">Contenido general</p><h2>Información del sitio</h2></div></div>
+            <label>Nombre del restaurante<input name="name" required></label><label>Subtítulo<input name="subtitle" required></label><label>Texto superior<input name="eyebrow" required></label><label>Título principal<textarea name="heroTitle" rows="2" required></textarea></label><label>Descripción principal<textarea name="heroText" rows="3" required></textarea></label><label>Texto de historia<textarea name="historyText" rows="3" required></textarea></label><label>Título de la carta<input name="menuTitle" required></label><label>Descripción de la carta<input name="menuText" required></label>
+            <div class="form-row"><label>Dirección<input name="address" required></label><label>Horario<input name="schedule" required></label></div><div class="form-row"><label>WhatsApp<input name="whatsapp" pattern="[0-9]{9,15}" required></label><label>Teléfono<input name="phone" required></label></div><label>Correo<input type="email" name="email" required></label>
+            <button class="button" type="submit">Guardar información <span>✓</span></button><p class="form-message" id="site-message" role="status"></p>
+          </form>
+          <div class="admin-list"><div class="list-heading"><h2>Platos publicados</h2><span id="dish-count"></span></div><form class="dish-form" id="dish-form"><div class="form-heading"><h2 id="form-title">Agregar plato</h2><button class="reset-button hidden" id="cancel-edit" type="button">Cancelar</button></div><input type="hidden" name="id"><label>Nombre<input name="name" required></label><div class="form-row"><label>Precio<input type="number" name="price" min="0" step=".5" required></label><label>Categoría<select name="category"><option>Entradas</option><option>Fondos</option><option>Dulces & bebidas</option></select></label></div><label>Descripción<textarea name="description" required></textarea></label><label>Etiqueta<input name="label"></label><label>URL de imagen<input type="url" name="image" required></label><button class="button" type="submit" id="save-dish">Agregar a la carta <span>+</span></button><p class="form-message" id="dish-message"></p></form><div id="dish-list"></div></div>
+        </div>
+      </section>
+    </div>
+  </section>
+  <script src="menu-data.js"></script>
+  <script>
+    const menuGrid = document.querySelector("#menu-grid");
+    const menuCategories = document.querySelectorAll(".category");
+    const categoryCounts = document.querySelectorAll(".category span");
+
+    function renderPublicMenu(filter = "Todos") {
+      const dishes = getDishes();
+      const visible = filter === "Todos" ? dishes : dishes.filter((dish) => dish.category === filter);
+      menuGrid.innerHTML = visible.map((dish) => `
+        <article class="dish-card">
+          <div class="dish-image">
+            <img src="${escapeHtml(dish.image)}" alt="${escapeHtml(dish.name)}">
+            ${dish.tag ? `<span class="tag">${escapeHtml(dish.tag)}</span>` : ""}
+          </div>
+          <div class="dish-body">
+            <div class="dish-top"><h3>${escapeHtml(dish.name)}</h3><strong>S/ ${Number(dish.price).toFixed(0)}</strong></div>
+            <p>${escapeHtml(dish.description)}</p><span class="dish-label">${escapeHtml(dish.label || dish.category)}</span>
+          </div>
+        </article>`).join("");
+    }
+
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" }[character]));
+    }
+
+    menuCategories.forEach((category) => category.addEventListener("click", (event) => {
+      event.preventDefault();
+      menuCategories.forEach((item) => item.classList.remove("active"));
+      category.classList.add("active");
+      renderPublicMenu(category.textContent.replace(/\d+/g, "").trim());
+    }));
+    renderPublicMenu();
+  </script>
+  <script src="admin.js"></script>
+</body>
+</html>

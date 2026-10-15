@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de administración | La Esquina del Cumbe</title>
+  <script>window.location.replace("index.html#admin-panel");</script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+  <main class="admin-shell">
+    <a class="back-link" href="index.html">← Volver al sitio público</a>
+    <section class="auth-card" id="auth-view">
+      <div class="admin-logo">EC</div>
+      <p class="eyebrow">Área restringida</p>
+      <h1>Panel de administración</h1>
+      <p class="auth-intro">Gestiona la carta de La Esquina del Cumbe.</p>
+      <div class="auth-tabs">
+        <button class="auth-tab active" type="button" data-auth-tab="login">Ingresar</button>
+        <button class="auth-tab" type="button" data-auth-tab="register">Registrar administrador</button>
+      </div>
+      <form id="login-form" class="auth-form">
+        <label>Correo electrónico<input type="email" name="email" autocomplete="username" required></label>
+        <label>Contraseña<input type="password" name="password" autocomplete="current-password" minlength="8" required></label>
+        <button class="button" type="submit">Ingresar al panel <span>→</span></button>
+      </form>
+      <form id="register-form" class="auth-form hidden">
+        <div class="security-notice">El registro requiere la contraseña general entregada por el propietario.</div>
+        <label>Nombre<input type="text" name="name" required></label>
+        <label>Correo electrónico<input type="email" name="email" autocomplete="username" required></label>
+        <label>Contraseña<input type="password" name="password" autocomplete="new-password" minlength="8" required></label>
+        <label>Contraseña general de aprobación<input type="password" name="approval" required></label>
+        <button class="button" type="submit">Crear cuenta aprobada <span>→</span></button>
+      </form>
+      <p class="form-message" id="auth-message" role="alert"></p>
+    </section>
+
+    <section class="dashboard hidden" id="dashboard-view">
+      <header class="dashboard-head">
+        <div><p class="eyebrow">Sesión protegida</p><h1>Gestionar carta</h1><p id="welcome-text"></p></div>
+        <button class="button button-outline" id="logout-button" type="button">Cerrar sesión</button>
+      </header>
+      <div class="dashboard-grid">
+        <form class="dish-form" id="dish-form">
+          <div class="form-heading"><div><p class="eyebrow">Editor de platos</p><h2 id="form-title">Agregar plato</h2></div><button class="reset-button hidden" id="cancel-edit" type="button">Cancelar edición</button></div>
+          <input type="hidden" name="id">
+          <label>Nombre del plato<input type="text" name="name" required maxlength="70"></label>
+          <div class="form-row"><label>Precio (S/)<input type="number" name="price" min="0" step="0.50" required></label><label>Categoría<select name="category"><option>Entradas</option><option>Fondos</option><option>Dulces & bebidas</option></select></label></div>
+          <label>Descripción<textarea name="description" rows="3" maxlength="180" required></textarea></label>
+          <label>Etiqueta<input type="text" name="label" maxlength="30" placeholder="Ej. Favorito"></label>
+          <label>URL de imagen<input type="url" name="image" required placeholder="https://..."></label>
+          <button class="button" type="submit" id="save-dish">Agregar a la carta <span>+</span></button>
+          <p class="form-message" id="dish-message" role="status"></p>
+        </form>
+        <div class="admin-list"><div class="list-heading"><h2>Platos publicados</h2><span id="dish-count"></span></div><div id="dish-list"></div></div>
+      </div>
+    </section>
+  </main>
+  <script src="menu-data.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
